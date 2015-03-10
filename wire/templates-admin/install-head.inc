@@ -11,19 +11,19 @@ if(!isset($bgTitle)) $bgTitle = "Installer";
 
 	<meta name="robots" content="noindex, nofollow" />
 
-	<link rel="stylesheet" type="text/css" href="wire/templates-admin/styles/main.css" />
-	<link rel="stylesheet" type="text/css" href="wire/templates-admin/styles/ui.css" />
-	<link rel="stylesheet" type="text/css" href="wire/templates-admin/styles/inputfields.css" />
-	<link rel="stylesheet" type="text/css" href="wire/templates-admin/styles/install.css" />
+	<link rel="stylesheet" type="text/css" href="<?php $config->urls->wire ?>templates-admin/styles/main.css" />
+	<link rel="stylesheet" type="text/css" href="<?php $config->urls->wire ?>templates-admin/styles/ui.css" />
+	<link rel="stylesheet" type="text/css" href="<?php $config->urls->wire ?>templates-admin/styles/inputfields.css" />
+	<link rel="stylesheet" type="text/css" href="<?php $config->urls->wire ?>templates-admin/styles/install.css" />
 
-	<script type="text/javascript" src="wire/modules/Jquery/JqueryCore/JqueryCore.js"></script>
-	<script type="text/javascript" src="wire/templates-admin/scripts/install.js"></script>
+	<script type="text/javascript" src="<?php $config->urls->wire ?>modules/Jquery/JqueryCore/JqueryCore.js"></script>
+	<script type="text/javascript" src="<?php $config->urls->wire ?>templates-admin/scripts/install.js"></script>
 </head>
 <body>
 <p id='bgtitle'><?php echo htmlentities($bgTitle, ENT_QUOTES, "UTF-8"); ?></p>
 <div id="masthead" class="masthead">
 	<div class="container">
-		<a target='_blank' id='logo' href='http://processwire.com'><img src="wire/templates-admin/styles/images/logo.gif" alt="ProcessWire" /></a>
+		<a target='_blank' id='logo' href='http://processwire.com'><img src="<?php $config->urls->wire ?>templates-admin/styles/images/logo.gif" alt="ProcessWire" /></a>
 		<h1 id='title'><?php echo htmlentities($title, ENT_QUOTES, "UTF-8"); ?></h1>
 	</div>
 </div>
