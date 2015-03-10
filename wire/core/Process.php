@@ -260,7 +260,7 @@ abstract class Process extends WireData implements Module {
 			'itemLabel2' => '', // smaller secondary label, when needed
 			'edit' => 'edit?id={id}', // URL segment for edit
 			'add' => 'add', // URL segment for add
-			'addLabel' => __('Add New', '/wire/templates-admin/default.php'),
+			'addLabel' => __('Add New', $config->urls->wire . 'templates-admin/default.php'),
 			'iconKey' => 'icon', // property/field containing icon, when applicable
 			'icon' => '', // default icon to use for items
 			'sort' => true, // automatically sort items A-Z?

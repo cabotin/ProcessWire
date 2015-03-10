@@ -1840,7 +1840,7 @@ class Modules extends WireArray {
 			$info['versionStr'] = $this->formatVersion($info['version']); // versionStr
 			$info['name'] = $moduleName; // module name
 			$info['file'] = $this->getModuleFile($moduleName, false); // module file	
-			if($info['file']) $info['core'] = strpos($info['file'], '/wire/modules/') !== false; // is it core?
+			if($info['file']) $info['core'] = strpos($info['file'], $config->urls->wire . 'modules/') !== false; // is it core?
 			
 			// module configurable?
 			$interfaces = @class_implements($moduleName, false); 
