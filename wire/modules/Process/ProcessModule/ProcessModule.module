@@ -158,7 +158,7 @@ class ProcessModule extends Process {
 	
 		if($site || $install) $data['add'] = array(
 			'url' => "?new#tab_new_modules",
-			'label' => __('Add New', '/wire/templates-admin/default.php'),
+			'label' => __('Add New', $this->wire('config')->urls->wire . 'templates-admin/default.php'),
 		);
 		
 		$modules = $this->wire('modules'); 
@@ -366,7 +366,7 @@ class ProcessModule extends Process {
 		
 		$markup = $this->modules->get('InputfieldMarkup');
 		$markup->value = $this->renderListTable($coreModulesArray);
-		$markup->label = $this->_('/wire/modules/ - Modules included with the ProcessWire core');
+		$markup->label = $this->_($this->wire('config')->urls->wire . 'modules/ - Modules included with the ProcessWire core');
 		$markup->icon = 'folder-open-o';
 		$tab->add($markup); 
 		$form->add($tab);

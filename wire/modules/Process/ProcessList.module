@@ -47,7 +47,7 @@ class ProcessList extends Process {
 				$title = $child->title;
 				if(!strlen($title)) $title = $info['title'];
 				if(!strlen($title)) $title = $child->name;
-				$titleTranslated = __($title, '/wire/templates-admin/default.php'); 
+				$titleTranslated = __($title, $this->wire('config')->urls->wire . 'templates-admin/default.php'); 
 				if($titleTranslated && $titleTranslated != $title) $title = $titleTranslated; 
 				$title = $this->wire('sanitizer')->entities1($title); 
 				if($child->summary) $summary = $child->summary; 
