@@ -12,12 +12,12 @@ if(!isset($formAction)) $formAction = './install.php';
 
 	<title><?php echo htmlentities($title, ENT_QUOTES, "UTF-8"); ?></title>
 
-	<link id='colors' type='text/css' href='wire/modules/AdminTheme/AdminThemeDefault/styles/main-classic.css' rel='stylesheet' />
-	<link type='text/css' href='wire/modules/AdminTheme/AdminThemeDefault/styles/install.css' rel='stylesheet' />
-	<link type='text/css' href='wire/templates-admin/styles/font-awesome/css/font-awesome.min.css' rel='stylesheet' />
-	<script type='text/javascript' src='wire/modules/Jquery/JqueryCore/JqueryCore.js'></script>
-	<script type='text/javascript' src='wire/modules/Jquery/JqueryUI/JqueryUI.js'></script>
-	<script type='text/javascript' src='wire/modules/AdminTheme/AdminThemeDefault/scripts/main.js'></script>
+	<link id='colors' type='text/css' href='<?php echo $config->urls->wire ?>modules/AdminTheme/AdminThemeDefault/styles/main-classic.css' rel='stylesheet' />
+	<link type='text/css' href='<?php echo $config->urls->wire ?>modules/AdminTheme/AdminThemeDefault/styles/install.css' rel='stylesheet' />
+	<link type='text/css' href='<?php echo $config->urls->wire ?>templates-admin/styles/font-awesome/css/font-awesome.min.css' rel='stylesheet' />
+	<script type='text/javascript' src='<?php echo $config->urls->wire ?>modules/Jquery/JqueryCore/JqueryCore.js'></script>
+	<script type='text/javascript' src='<?php echo $config->urls->wire ?>modules/Jquery/JqueryUI/JqueryUI.js'></script>
+	<script type='text/javascript' src='<?php echo $config->urls->wire ?>modules/AdminTheme/AdminThemeDefault/scripts/main.js'></script>
 
 </head>
 <body>
@@ -25,7 +25,7 @@ if(!isset($formAction)) $formAction = './install.php';
 	<div id="masthead" class="masthead ui-helper-clearfix">
 		<div class="container">
 
-			<a id='logo' target='_blank' href='http://processwire.com'><img width='130' src="wire/modules/AdminTheme/AdminThemeDefault/styles/images/logo.png" alt="ProcessWire" /></a>
+			<a id='logo' target='_blank' href='http://processwire.com'><img width='130' src="<?php echo $config->urls->wire ?>modules/AdminTheme/AdminThemeDefault/styles/images/logo.png" alt="ProcessWire" /></a>
 
 		</div>
 	</div><!--/#masthead-->

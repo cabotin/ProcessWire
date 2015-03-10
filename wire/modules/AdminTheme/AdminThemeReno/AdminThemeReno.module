@@ -122,7 +122,7 @@ class AdminThemeReno extends AdminTheme implements Module, ConfigurableModule {
 			if(!$p->viewable()) continue;
 			$field = wire('modules')->get("InputfieldText");
 			$field->attr('name', $p->name);
-			$field->label = __($p->title, '/wire/templates-admin/default.php');
+			$field->label = __($p->title, $this->wire('config')->urls->wire . 'templates-admin/default.php');
 			$field->columnWidth = 25;
 			$field->attr('value', array_key_exists($p->name, self::$defaultIcons) ? self::$defaultIcons[$p->name] : "fa-file-text-o");
 			if (isset($data[$p->name])) $field->attr('value', $data[$p->name]);

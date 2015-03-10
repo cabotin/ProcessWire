@@ -19,7 +19,7 @@ class AdminThemeDefaultHelpers extends WireData {
 	 * 
 	 */
 	public function _($text) {
-		return __($text, $this->wire('config')->paths->root . 'wire/templates-admin/default.php'); 
+		return __($text, $this->wire('config')->paths->root . $this->wire('config')->urls->wire . 'templates-admin/default.php'); 
 	}
 
 	/**
