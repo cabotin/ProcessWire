@@ -18,8 +18,8 @@ $searchForm = $user->hasPermission('page-edit') ? $modules->get('ProcessPageSear
 $version = $adminTheme->version;
 
 $config->styles->prepend($config->urls->adminTemplates . "styles/" . ($adminTheme->colors ? "main-$adminTheme->colors" : "main-classic") . ".css?v=$version"); 
-$config->styles->append( $config->urls->root . $config->urls->wire . "templates-admin/styles/font-awesome/css/font-awesome.min.css?v=$version"); 
-$config->scripts->append($config->urls->root . $config->urls->wire . "templates-admin/scripts/inputfields.js?v=$version"); 
+$config->styles->append( $config->urls->wire . "templates-admin/styles/font-awesome/css/font-awesome.min.css?v=$version"); 
+$config->scripts->append($config->urls->wire . "templates-admin/scripts/inputfields.js?v=$version"); 
 $config->scripts->append($config->urls->adminTemplates . "scripts/main.js?v=$version");
 	
 require_once(dirname(__FILE__) . "/AdminThemeDefaultHelpers.php");
