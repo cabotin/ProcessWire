@@ -22,8 +22,8 @@ $version = $adminTheme->version;
 $searchForm = $user->hasPermission('page-edit') ? $modules->get('ProcessPageSearch')->renderSearchForm($adminTheme->getSearchPlaceholder()) : '';
 
 $config->styles->prepend($config->urls->adminTemplates . "styles/" . ($adminTheme->colors ? "$adminTheme->colors" : "main") . ".css?v=$version"); 
-$config->styles->append( $config->urls->root . $config->urls->wire . "templates-admin/styles/font-awesome/css/font-awesome.min.css?v=$version");
-$config->scripts->append($config->urls->root . $config->urls->wire . "templates-admin/scripts/inputfields.js?v=$version"); 
+$config->styles->append( $config->urls->wire . "templates-admin/styles/font-awesome/css/font-awesome.min.css?v=$version");
+$config->scripts->append($config->urls->wire . "templates-admin/scripts/inputfields.js?v=$version"); 
 $config->scripts->append($config->urls->adminTemplates . "scripts/main.js?v=$version");
 
 require_once(dirname(__FILE__) . "/AdminThemeRenoHelpers.php");
