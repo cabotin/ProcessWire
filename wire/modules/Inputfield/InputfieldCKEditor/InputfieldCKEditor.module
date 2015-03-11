@@ -220,7 +220,7 @@ class InputfieldCKEditor extends InputfieldTextarea {
 		if($this->rows) $settings['height'] = ($this->rows*2) . 'em'; // set editor height, based on rows value
 	
 		$stylesSet = $this->stylesSet; 
-		if(empty($stylesSet)) $stylesSet = "mystyles:/wire/modules/Inputfield/InputfieldCKEditor/mystyles.js";
+		if(empty($stylesSet)) $stylesSet = "mystyles:".wire('config')->urls->wire."modules/Inputfield/InputfieldCKEditor/mystyles.js";
 		if(strpos($stylesSet, ':') !== false) {
 			list($k, $v) = explode(':', $stylesSet); 
 			$settings['stylesSet'] = "$k:" . $this->pathFromRoot($v); 
